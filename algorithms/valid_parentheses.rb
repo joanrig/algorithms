@@ -12,4 +12,4 @@ def is_valid(s)
     stack.empty?
 
 
- end
+end
