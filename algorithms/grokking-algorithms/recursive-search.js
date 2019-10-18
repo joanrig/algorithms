@@ -1,15 +1,13 @@
-
 let doll5 = ["diamond"]
-let doll4 = ["note", doll5]
-let doll3 = ["note", doll4]
-let doll2 = ["note", doll3]
-let doll1 = ["note", doll2]
+let doll4 = [doll5]
+let doll3 = [doll4]
+let doll2 = [doll3]
+let doll1 = [doll2]
 
-let nestingDolls = [doll1]
-
+let nestingDolls = doll1
 
 const findDiamond = function(nestingDolls){
-
+  let current = nestingDolls[0]
   let result
 
   //base case
@@ -20,14 +18,9 @@ const findDiamond = function(nestingDolls){
   }
 
   //recursion
-  for(let i = 0; i < nestingDolls.length; i++){
-    let current = nestingDolls[i]
-    console.log("current is ", current)
-    if (Array.isArray(current)){
-      return result = findDiamond(current)
-    }
+  if (Array.isArray(current)){
+    return result = findDiamond(current)
   }
-
 }
 
 findDiamond(nestingDolls)
