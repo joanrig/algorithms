@@ -1,3 +1,4 @@
+
 var isHappy = function(n, counter = 0) {
     result = false
     if(counter < 8){
