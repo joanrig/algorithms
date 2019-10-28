@@ -1,0 +1,24 @@
+var countPrimes = function(n) {
+
+    //build array to mark
+    let nums = [...Array(n).keys()]
+
+    for(let i = 2; i*i < n; i++){
+        if(nums[i] !== "nope"){
+            for(let j = i*i; j < n; j += i){
+                nums[j] = "nope"
+            }
+        }
+    }
+
+
+    let primes = []
+
+    for(let i = 0; i < nums.length; i++) {
+        if(nums[i] > 1){
+            primes.push(nums[i])
+        }
+    }
+
+    return primes.length
+};
