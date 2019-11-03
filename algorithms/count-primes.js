@@ -4,9 +4,9 @@ var countPrimes = function(n) {
     let nums = [...Array(n).keys()]
 
     for(let i = 2; i*i < n; i++){
-        if(nums[i] !== "nope"){
+        if(nums[i] !== "1"){
             for(let j = i*i; j < n; j += i){
-                nums[j] = "nope"
+                nums[j] = "1"
             }
         }
     }
